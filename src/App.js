@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  let [n, setN] = React.useState(5); 
+	let changeN = (e) => setN(e.target.value);
+
+	return <div className="App">
+  
+    <p>Число натуральных чисел: <input type="text" placeholder="Укажите N" value={n} onChange={changeN}/></p>
+    <p>Сумма натуральных чисел: {(n*(n+1))/2}</p>
+
+	
+	</div>;
+
+
 }
 
 export default App;
