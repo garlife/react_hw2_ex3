@@ -4,7 +4,7 @@ import React from "react";
 function App() {
   
   let [n, setN] = React.useState(5); 
-	let changeN = (e) => setN(e.target.value);
+	let changeN = (e) => setN(Number(e.target.value));
 
 	return <div className="App">
   
